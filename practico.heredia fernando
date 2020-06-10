@@ -1,0 +1,152 @@
+Proceso Pelix
+	
+	definir dinero como entero;
+	definir num como entero;
+	definir nomb como cadena;
+	dimension nomb(2);
+	nomb[]<-"spdlep";
+	definir gmail como caracter;
+	definir contra como cadena;
+	
+	definir contra1 como cadena;
+	dimension contra(2);
+	contra[]<-"spdlep";
+	definir i como entero;
+	
+	definir contra2 como cadena;
+	definir us como cadena;
+	definir cont como entero;
+	definir cont2 como entero;
+	cont2<-0;
+	definir cont3 como entero;
+	
+	definir cont1 como entero;
+	cont1<- 1;
+	
+	definir conta1 como cadena;
+	
+	definir targ como entero;
+	definir var como logico;
+	definir var2 como logico;
+	definir var3 como logico;
+	var <- falso;
+	definir var1 como logico;
+	var1<- falso;
+	var2<- falso;
+	var3<- falso;
+	
+	
+	Mientras var1=falso Hacer
+		
+		
+		escribir ">>>PELIX<<<";
+		escribir " ";
+		escribir "Valor de subscripcion:";
+		escribir "basica   100";
+		escribir "estandar 200";
+		escribir "premium  300";
+		escribir " ";
+		escribir "Crea tu cuenta y suscribete para tener acceso al contenido exclusivo del canal";
+		escribir "y disfrutar de los mejores estrenos";
+		escribir " ";
+		escribir "1_Acceder";
+		escribir "2_Crea una cuenta";
+		leer num;
+		limpiar pantalla;
+		
+		
+		
+		Segun num Hacer
+			1:
+				
+				
+				
+				
+				
+				
+				limpiar pantalla;
+				escribir "Usuario";
+				leer us;
+				si us = nomb[] entonces
+					escribir "usuario correcto";
+					
+				sino
+					escribir "usuario incorrecto";
+					escribir "precine una tecla";
+					esperar tecla;
+					Para i<-0 Hasta 1 Con Paso 1 Hacer
+						limpiar pantalla;
+						escribir "usuario incorrecto";
+						escribir "Ingrese nuevamente el usuario";
+						leer us;
+						si us = nomb[] entonces
+							escribir "usuario correcto";	
+						sino 	
+							escribir "usuario incorrecto";
+							cont2<-cont2+1;
+						finsi
+						
+					finpara	
+				finsi
+				
+				
+				si cont2=2 entonces
+					escribir "error!";
+					escribir"presione una tecla para salir";
+					esperar tecla;
+				sino
+					Para i<-0 Hasta 1-1 Con Paso 1 Hacer
+						escribir "contraseña";
+						leer contra1;
+						si contra1 = contra[] entonces
+							escribir "contrseña correcta";
+							
+							escribir"precione enter";
+							esperar tecla;
+							var1<-verdadero;
+						SiNo
+							Escribir "contraseña inconrrecta";
+							escribir"precione enter";
+							esperar tecla;
+						FinSi
+					finpara
+				finsi
+				
+				
+			2:
+				
+				
+				
+				Para cont <- 0 Hasta cont1-1 Con Paso 1 Hacer
+					escribir "Crea una cuenta de Pelix";
+					escribir " ";
+					escribir "Nombre";
+					leer nomb[cont] ;
+					escribir "Usuario-mail";
+					leer gmail;
+					escribir "contraseña";
+					leer contra[cont];
+					escribir "confirmacion";
+					leer contra2;
+					si contra[cont] = contra2 entonces
+						escribir "perfil cargado correctamente";
+						escribir "precione una tecla";
+						
+						esperar tecla;
+					sino
+						escribir "las contraseñas no coinciden intentelo nuevamente";
+						esperar tecla;
+						limpiar pantalla;
+					FinSi
+				finpara
+				
+				
+		FinSegun
+	finmientras
+	Limpiar Pantalla;
+	escribir "BIENVENIDO A PELIX";
+	escribir " ";
+	escribir "1_accion";
+	escribir "2_drama";
+	escribir "3_comedia";
+FinProceso
